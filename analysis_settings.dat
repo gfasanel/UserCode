@@ -1,0 +1,153 @@
+## Trigger selection
+doTriggerSelection=1
+
+## Di-jet tag #conta come 2 categorie#mio
+includeVBF=0
+usePUjetveto=1
+
+## 2-categories cut-based
+### nVBFEtaCategories=1
+### nVBFDijetJetCategories=2
+### leadEtVBFCut=60
+### subleadEtVBFCut=25
+
+## MVA tag
+mvaVbfSelection=1
+multiclassVbfSelection=0
+mvaVbfWeights=aux/TMVA_vbf_6var_mjj100_diphopt_phopt_BDTG.weights.xml
+mvaVbfMethod=BDTG
+leadEtVBFCut=40
+subleadEtVBFCut=30
+mvaVbfCatBoundaries=1.,0.985,0.93 
+
+## Singal mass points to book
+sigPointsToBook=105,110,115,120,125,130,135,140,145,150
+
+## Hadronic TTH tag
+includeTTHhad=1
+leadEtTTHhadCut=60
+subleadEtTTHhadCut=25
+
+## Leptonic TTH tag
+includeTTHlep=1
+leadEtTTHlepCut=60
+subleadEtTTHlepCut=25
+
+## Hadronic Tprime tag ##Giuseppe #33
+includeTprimehad=1
+leadEtTprimehadCut=33
+subleadEtTprimehadCut=25
+
+## Leptonic Tprime tag ##Giuseppe #33
+includeTprimelep=1
+leadEtTprimelepCut=33
+subleadEtTprimelepCut=25
+
+## Loose tag ##Giuseppe #Accendi e spegni solo questa
+includeLoose=0
+
+	
+## Hadronic V tag
+includeVHhad=0
+nVHhadEtaCategories=1
+leadEtVHhadCut=60
+subleadEtVHhadCut=25
+
+## Hadronic V tag + btag
+includeVHhadBtag=0
+leadEtVHhadCut=60
+subleadEtVHhadCut=25
+ptjet_loosecut=20
+
+## Lepton tag #mio
+includeVHlep=0
+includeVHlepB=0
+leadEtVHlepCut=45
+#subleadEtVHlepCut=30
+nElectronCategories=1 
+nMuonCategories=1 
+
+## MET tag
+includeVHmet=0
+leadEtVHmetCut=45
+#subleadEtVHmetCut=30
+nMetCategories=1 
+
+doKFactorSmear=0
+doKFactorSyst=0
+
+## Inputs for reweighing
+kfacHist=
+# ggh scale uncertainties
+pdfWeightHist=aux/GF_mvasys.root
+## For 7TeV samples
+## kfacHist=aux/KFactors_AllScales_interpolated.root
+puMap=
+puHist=auto
+## puTarget=aux/HCP2012_preapproval_red_v1.json.69400.observed.pileup.root
+puTarget=aux/Moriond_pileup_190456-208686_minBiasXsec69400_corr_observed.root
+
+## energy regression
+energyCorrectionMethod=Bendavid
+doEcorrectionSmear=1
+doEcorrectionSyst=0
+
+## energy scale adjustement and errors
+#rereco
+scale_offset_file=energy_scale_offsets_std_mc.dat
+#prompt reco
+#scale_offset_file=energy_scale_offsets.dat
+scale_offset_error_file=energy_scale_errors.dat
+
+## uncorrelated part of the uncertainties
+splitEscaleSyst=0
+scale_offset_corr_error_file=energy_scale_corr_errors.dat
+
+## additional MC smearing
+#rereco
+smearing_file=smearing_sigma_and_errors_std_mc.dat
+#prompt reco 
+#smearing file= smearing_sigma_and_errors.dat 
+## smearing correction for BDT input
+#rereco
+mass_resol_file=smearing_sigma_and_errors_std_mc.dat
+#promt reco
+#mass_resol_file=smearing_sigma_and_errors_hcp2012.dat
+
+## uncorrelated part of the uncertainties
+splitEresolSyst=0
+corr_smearing_file=smearing_sigma_corr_errors.dat
+
+## jets
+recomputeBetas=0
+recorrectJets=1
+rerunJetMva=0
+recomputeJetWp=1
+
+## revertex
+reRunVtx=0
+rematchConversions=0
+
+doInterferenceSmear=1
+
+deltaRPholep_cut=0
+doMinvCut=0
+ptJets_ttH_thresh=25.
+njets_tthHad_thresh=5
+doDrGsfTrackCut=1
+drSC_lep=0.5
+drGsf_lep=1.
+#doApplyEleVeto=0 
+#doDrGsfTrackCut=0 
+#drSC_lep=0.   
+#drGsf_lep=0.	   
+#doApplyEleVeto=1   
+removeBtagtth=0
+applyLeptonSF=0
+useDefaultVertex=1
+applyBtagSF=1
+shiftBtagEffUp_bc=0
+shiftBtagEffDown_bc=0
+shiftBtagEffUp_l=0
+shiftBtagEffDown_l=0
+createCS=0
